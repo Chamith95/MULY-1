@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
             getSupportActionBar().setBackgroundDrawable(
                     new ColorDrawable(ContextCompat.getColor(this, R.color.colorPrimaryDark)));
         }
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         Util.requestPermission(this, Manifest.permission.RECORD_AUDIO);
         Util.requestPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
     }

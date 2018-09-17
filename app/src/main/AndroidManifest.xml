@@ -14,6 +14,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity"
             android:exported="true"
+            android:parentActivityName=".studentSelectInstrumentsMain"
             >
 
         </activity>
@@ -32,7 +33,9 @@
             android:name=".studentSelectInstrumentsMain"
             android:label="@string/title_activity_stu_selectins_m"
             android:exported="true"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".StudentMActivity"
+            ></activity>
     </application>
 
 </manifest>
