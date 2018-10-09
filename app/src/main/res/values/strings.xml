@@ -83,6 +83,19 @@
     <string name="tab1_teacher" translatable="false">tab1 Teacher</string>
     <string name="title_activity_stu_selectins_m" translatable="false">stu_selectinsM</string>
     <string name="title_activity_edit_profile" translatable="false">edit_profile</string>
-    <string name="title_activity_teacher_main">TeacherMain</string>
+    <string name="title_activity_teacher_main" translatable="false">TeacherMain</string>
+    <string name="title_activity_signup" translatable="false">signup</string>
+<!--Role Spinner in signup-->
+    <string-array name="Role">
+        <item>Student</item>
+        <item>Teacher</item>
+    </string-array>
+
+    <!--Gender Spinner in signup-->
+    <string-array name="Gender">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Not Specified</item>
+    </string-array>
 
 </resources>

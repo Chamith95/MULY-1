@@ -23,8 +23,7 @@
             android:exported="true"
             android:label="@string/title_activity_student_m"
             android:parentActivityName=".login"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".studentSelectInstrumentsMain"
             android:exported="true"
@@ -41,16 +40,22 @@
             android:name=".login"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".TeacherMain"
             android:label="@string/title_activity_teacher_main"
             android:parentActivityName=".login"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".signup"
+            android:label="@string/title_activity_signup"
+            android:parentActivityName=".login"
+            android:exported="true"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
