@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ImageView;
 import android.content.Intent;
 
 public class StudentMActivity extends AppCompatActivity {
@@ -37,6 +36,9 @@ public class StudentMActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         mSectionsPagerAdapter =new SectionsPagerAdapter(getSupportFragmentManager());
 
         mViewPager=(ViewPager) findViewById(R.id.container);
@@ -63,7 +65,7 @@ public class StudentMActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.stmenu1, menu);
+        getMenuInflater().inflate(R.menu.menu1, menu);
         return true;
     }
 
