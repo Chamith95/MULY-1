@@ -77,16 +77,16 @@ public class edit_profile extends AppCompatActivity {
     }
 
     public void confirmInput(View v) {
-        if (!validateEmail() | !validateTelephone() | validateUsername()) {
+        if (!validateEmail() | !validateTelephone() | !validateUsername()) {
             return;
 
         }
 
-        String input = "Username" + textInputUsername.getEditText().getText().toString();
+        String input = "Username" + textInputEmail.getEditText().getText().toString();
         input += "\n";
         input += "Email" + textInputUsername.getEditText().getText().toString();
         input += "\n";
-        input += "Telephone" + textInputUsername.getEditText().getText().toString();
+        input += "Telephone" + textInputTelephone.getEditText().getText().toString();
 
         Toast.makeText(this, "input", Toast.LENGTH_SHORT).show();
 

@@ -12,6 +12,7 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -145,6 +146,11 @@ public class login extends AppCompatActivity {
             onLoginFailed();
         }
 
+    }
+
+    public void popsignup(View v){
+        Intent intent3=new Intent(login.this,signup.class);
+        startActivity(intent3);
     }
 }
 
