@@ -23,7 +23,7 @@
             android:exported="true"
             android:label="@string/title_activity_student_m"
             android:parentActivityName=".login"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".studentSelectInstrumentsMain"
             android:exported="true"
@@ -48,16 +48,17 @@
         </activity>
         <activity
             android:name=".TeacherMain"
-            android:label="@string/title_activity_teacher_main"
             android:exported="true"
+            android:label="@string/title_activity_teacher_main"
             android:parentActivityName=".login"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".signup"
+            android:exported="true"
             android:label="@string/title_activity_signup"
             android:parentActivityName=".login"
-            android:exported="true"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".teachercardtest"></activity>
     </application>
 
 </manifest>

@@ -85,7 +85,7 @@
     <string name="title_activity_edit_profile" translatable="false">edit_profile</string>
     <string name="title_activity_teacher_main" translatable="false">TeacherMain</string>
     <string name="title_activity_signup" translatable="false">signup</string>
-<!--Role Spinner in signup-->
+    <!--Role Spinner in signup-->
     <string-array name="Role">
         <item>Student</item>
         <item>Teacher</item>

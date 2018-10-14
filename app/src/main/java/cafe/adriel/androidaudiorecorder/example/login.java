@@ -2,8 +2,8 @@ package cafe.adriel.androidaudiorecorder.example;
 
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.design.widget.TextInputLayout;
-import android.support.v7.app.AppCompatActivity;
+import com.google.android.material.textfield.TextInputLayout;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.util.Log;
 import android.app.ProgressDialog;

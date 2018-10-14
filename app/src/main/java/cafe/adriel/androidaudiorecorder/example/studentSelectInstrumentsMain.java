@@ -2,17 +2,17 @@ package cafe.adriel.androidaudiorecorder.example;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import java.util.ArrayList;
 
 
-public class studentSelectInstrumentsMain extends AppCompatActivity {
+public class  studentSelectInstrumentsMain extends AppCompatActivity {
     private ArrayList<stu_selectinstrument_item> mInsList;
     private RecyclerView mRecyclerView;
     private RecyclerViewAdapterSt_insSelect mAdapter;
