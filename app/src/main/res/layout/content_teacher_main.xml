@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="50dp"
+    android:layout_marginTop="55dp"
     >
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/stu_teacherselect_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="4dp"
-        android:background="@drawable/ic_arrow_back_black_24dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="13dp" />
+        tools:listitem="@layout/teacherm_student_item"
+        />
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+
 
         <com.google.android.material.bottomappbar.BottomAppBar
             android:id="@+id/bottomAppBar"
@@ -30,7 +29,10 @@
             app:fabAlignmentMode="center"
             app:fabCradleRoundedCornerRadius="16dp"
             app:backgroundTint="@color/colorPrimary"
+            app:hideOnScroll="true"
+            app:layout_scrollFlags="scroll|enterAlways"
             app:navigationIcon="@drawable/ic_menu_black_24dp">
+
 
         </com.google.android.material.bottomappbar.BottomAppBar>
 
@@ -41,9 +43,11 @@
             app:backgroundTint="#000000"
             android:id="@+id/fab"
             android:clickable="true"
-            app:srcCompat="@drawable/ic_person_white_24dp"
+            app:srcCompat="@drawable/ic_add_white_24dp"
             app:layout_anchor="@+id/bottomAppBar" />
 
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-</RelativeLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

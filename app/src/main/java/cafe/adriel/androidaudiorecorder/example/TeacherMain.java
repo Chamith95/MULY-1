@@ -6,44 +6,55 @@ import android.os.Bundle;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.material.bottomappbar.BottomAppBar;
+import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
 
 public class TeacherMain extends AppCompatActivity {
-    private ArrayList<teacherM_card_item> mactList;
+    private ArrayList<teacherM_card_item> mactList; //list for card items
 
     private RecyclerView tRecyclerView;
     private RecyclerViewAdapterTeMain_items tAdapter;
     private RecyclerView.LayoutManager tLayoutManager;
+    public NavigationView navigation;
 
-    FloatingActionButton floatingActionButton;
+    FloatingActionButton floatingActionButton; //floating button
     BottomAppBar bottomAppBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_teacher_main);
+
+        /*Creating the recycler view*/
         createitemlist();
         buildRecyclerView();
+        /*Creating top toolbar*/
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
         floatingActionButton = findViewById(R.id.fab);
         bottomAppBar = findViewById(R.id.bottomAppBar);
+        /*The back button*/
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        BottomAppBar bar = (BottomAppBar) findViewById(R.id.bottomAppBar);
 
+        /*bottom menu icon listners*/
+        BottomAppBar bar = (BottomAppBar) findViewById(R.id.bottomAppBar);
         bar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
@@ -57,7 +68,7 @@ public class TeacherMain extends AppCompatActivity {
                 return true;
             }
         });
-
+        /*Bottom sheet navigation creation*/
         BottomAppBar bar1 = (BottomAppBar) findViewById(R.id.bottomAppBar);
         bar1.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,17 +80,26 @@ public class TeacherMain extends AppCompatActivity {
                 bottomSheetDialogFragment.show(getSupportFragmentManager(), bottomSheetDialogFragment.getTag());
 
                 // Handle the navigation click by showing a BottomDrawer etc.
+
+
             }
         });
+
+
+
 
 
 
     }
 
     public void createitemlist() {
-        //Adding items to instrument RecycleView
+        //Adding items to card items RecycleView
         mactList = new ArrayList<>();
-        mactList.add(new teacherM_card_item(R.drawable.person,R.drawable.graph1, "Student1"));
+        mactList.add(new teacherM_card_item(R.drawable.person, R.drawable.graph1, "Student1"));
+        mactList.add(new teacherM_card_item(R.drawable.person, R.drawable.graph1, "Student2"));
+        mactList.add(new teacherM_card_item(R.drawable.person, R.drawable.graph1, "Student3"));
+        mactList.add(new teacherM_card_item(R.drawable.person, R.drawable.graph1, "Student4"));
+        mactList.add(new teacherM_card_item(R.drawable.person, R.drawable.graph1, "Student5"));
     }
 
     public void buildRecyclerView() {
@@ -98,10 +118,6 @@ public class TeacherMain extends AppCompatActivity {
         });
 
 
-
-
-
-
     }
 
 
@@ -115,7 +131,7 @@ public class TeacherMain extends AppCompatActivity {
 
     }
 
-    int item=R.id.action_search1;
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -128,7 +144,7 @@ public class TeacherMain extends AppCompatActivity {
 
         if (id == R.id.profile) {
 
-            Intent intent = new Intent(this,edit_profile.class);
+            Intent intent = new Intent(this, edit_profile.class);
             this.startActivity(intent);
             return true;
         }
@@ -139,15 +155,13 @@ public class TeacherMain extends AppCompatActivity {
             return true;
         }
 
-
-
-
         return super.onOptionsItemSelected(item);
     }
 
-    public void openSortDialog(){
-        sortbydialog sortDialog=new sortbydialog();
-        sortDialog.show(getSupportFragmentManager(),"Sort by dialog");
+    /*Sort dialog box*/
+    public void openSortDialog() {
+        sortbydialog sortDialog = new sortbydialog();
+        sortDialog.show(getSupportFragmentManager(), "Sort by dialog");
 
     }
 
