@@ -39,7 +39,14 @@ public class STab1Teacher extends Fragment {
     public void createInslist() {
         //Adding items to instrument RecycleView
         mInsList = new ArrayList<>();
-        mInsList.add(new stu_selectTeacher_item(R.drawable.person, "Details about the teacher"));//deatils for the card view
+        mInsList.add(new stu_selectTeacher_item(R.drawable.person, "Details about the teacher"));
+        mInsList.add(new stu_selectTeacher_item(R.drawable.person, "Details about the teacher"));
+        mInsList.add(new stu_selectTeacher_item(R.drawable.person, "Details about the teacher"));
+        mInsList.add(new stu_selectTeacher_item(R.drawable.person, "Details about the teacher"));
+        mInsList.add(new stu_selectTeacher_item(R.drawable.person, "Details about the teacher"));
+        mInsList.add(new stu_selectTeacher_item(R.drawable.person, "Details about the teacher"));
+        mInsList.add(new stu_selectTeacher_item(R.drawable.person, "Details about the teacher"));
+        //deatils for the card view
     }
 
 //    public void buildRecyclerView() {

@@ -46,6 +46,8 @@ public class  studentSelectInstrumentsMain extends AppCompatActivity {
         //Adding items to instrument RecycleView
         mInsList = new ArrayList<>();
         mInsList.add(new stu_selectinstrument_item(R.drawable.pianokeys, "Piano"));
+
+
     }
 
     public void buildRecyclerView() {
